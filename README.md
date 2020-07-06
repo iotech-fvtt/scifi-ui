@@ -7,6 +7,7 @@ This entire work (except graphics) is CC BY 4.0
 https://creativecommons.org/licenses/by/4.0/
 
 Tab Icons
+
 Scenes		Rexard 7000 Icons Bundle (licensed)
 Items		Rexard 7000 Icons Bundle (licensed)
 Journals		Rexard 7000 Icons Bundle (licensed)
