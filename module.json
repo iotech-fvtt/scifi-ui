@@ -2,7 +2,7 @@
   "name": "scifi-ui",
   "title": "SciFi UI",
   "description": "An updated science fiction-flavored UI for FVTT. Uses icons from Rexard.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "iotech",
   "scripts": [ "scifiui.js" ],
   "styles": [ "scifiui.css" ],
@@ -10,7 +10,7 @@
   "packs": [],
   "url": "https://github.com/iotech-fvtt/scifi-ui",
   "manifest": "https://raw.githubusercontent.com/iotech-fvtt/scifi-ui/master/module.json",
-  "download": "https://github.com/iotech-fvtt/scifi-ui/releases/download/0.1.2/scifi-ui.zip",
-  "minimumCoreVersion": "0.5.5",
-  "compatibleCoreVersion": "0.6.2"
+  "download": "https://github.com/iotech-fvtt/scifi-ui/releases/download/0.2.0/scifi-ui.zip",
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9"
 }

@@ -1,83 +1,172 @@
+/* #region General UI */
+
+
+/* #region Scene Control (left side) Buttons */
+
+.scene-control {
+    /*background-image: url("/modules/scifi-ui/ui/img/scene-control.webp") !important;*/
+    background-size: 100% 100% !important;
+    color: white !important;
+}
+
+.control-tool {
+    /*background-image: url("/modules/scifi-ui/ui/img/scene-control.webp") !important;*/
+    background-size: 100% 100% !important;
+    color: white !important;
+}
+
+#controls .scene-control,
+#controls .control-tool {
+    font-size: 14px;
+    ;
+}
+
+/* #endregion */
+
+
+/* #region Scene Navigation */
+#navigation #nav-toggle {
+    background-image: url("/modules/scifi-ui/ui/img/panel1.webp");
+    background-size: 100% 100% !important;
+}
+
+#navigation #scene-list .scene.view,
+#navigation #scene-list .scene.context {
+    /*background-image: url("/modules/scifi-ui/ui/img/scene-control.webp") !important;*/
+    background-size: 110% 100% !important;
+    color: white !important;
+    background: left;
+    background-position: center;
+}
+
+#navigation #scene-list .scene.gm {
+    /*background-image: url("/modules/scifi-ui/ui/img/scene-control.webp") !important;*/
+    background-size: 110% 100% !important;
+    color: white !important;
+    background: left;
+    background-position: center;
+}
+
+
+/* #endregion */
+
+
+/* #endregion */
+
+
 /* #region Sidebar*/
 
 #sidebar {
-
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     position: fixed;
     right: 5px;
     top: 5px;
-    width: 325px !important;
-    height: 99vh;
+    width: 320px !important;
+    height: 100%;
     overflow: hidden;
     margin: 0;
-    border: 10px solid transparent;
-    border-image-source: url("/modules/scifi-ui/ui/img/panel2.png");
-    border-image-slice: 30 fill;
+    border: 25px solid transparent;
+    border-image-source: url("/modules/scifi-ui/ui/img/panel1.webp");
+    border-image-slice: 20 fill;
     background-position: center !important;
-    background-size: 300px 100%!important;
+    background-size: 320px 100%!important;
     background-repeat: no-repeat;
-    box-sizing: border-box;
-    box-shadow: -30 -30 25px outset #008cff;
-    background: url("/modules/scifi-ui/ui/img/denim075.png") repeat;
+    padding: 0px;
+    ;
 }
 
-.collapse::before{
+.collapse::before {
     content: "";
 }
 
 #sidebar.collapsed {
-    width: 75px !important;
-    height: 620px !important;
+    width: 90px !important;
+    height: 610px !important;
     padding-left: 5px;
-    border: 5px solid transparent;
-    border-image-source: url("/modules/scifi-ui/ui/img/panel2.png");
+    border: 15px solid transparent;
+    border-image-source: url("/modules/scifi-ui/ui/img/panel1.webp");
     border-image-slice: 35 fill;
     background-position: center !important;
     background-size: 100% 100%!important;
     background-repeat: no-repeat;
-    box-sizing: border-box;
-    box-shadow: -5 -5 25px inset #008cff;
+    background-color: #343434;
 }
 
-#sidebar-tabs{
+#sidebar.collapsed #sidebar-tabs {
+    height: 100%;
+}
+
+#sidebar-tabs {
     text-align: center;
 }
 
-#sidebar #sidebar-tabs > .item {
+#sidebar #sidebar-tabs>.item {
     line-height: 0px;
 }
 
-i.fa-caret-right::before{
+i.fa-caret-right::before {
     content: "";
-
 }
 
-.fa-caret-right{
-    background-image: url("/modules/scifi-ui/ui/img/Right_arrow_Hexagonal_Icon.svg") !important;
+i.fa-caret-left::before {
+    content: "";
+}
+
+i.fa-caret-up::before {
+    content: "";
+}
+
+i.fa-caret-down::before {
+    content: "";
+}
+
+.fa-caret-right {
+    background-image: url("/modules/scifi-ui/ui/img/right.webp") !important;
     width: 40px;
-    height: 30px;
+    height: 40px;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:20px 15px !important;
+    background-position: center !important;
+    background-size: 30px 30px !important;
     background-repeat: no-repeat;
     content: "";
     text-align: center;
 }
 
-i.fa-caret-left::before{
+.fa-caret-left {
+    background-image: url("/modules/scifi-ui/ui/img/left.webp") !important;
+    width: 40px;
+    height: 40px;
+    display: inline-block !important;
+    background-position: center !important;
+    background-size: 30px 30px !important;
+    background-repeat: no-repeat;
     content: "";
-
+    text-align: center;
+    vertical-align: top;
 }
 
-.fa-caret-left{
-    background-image: url("/modules/scifi-ui/ui/img/Left_arrow_Hexagonal_Icon.svg") !important;
+.fa-caret-up {
+    background-image: url("/modules/scifi-ui/ui/img/up.webp") !important;
     width: 40px;
-    height: 30px;
+    height: 40px;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:20px 15px !important;
+    background-position: center !important;
+    background-size: 30px 30px !important;
+    background-repeat: no-repeat;
+    content: "";
+    text-align: center;
+    vertical-align: top;
+}
+
+.fa-caret-down {
+    background-image: url("/modules/scifi-ui/ui/img/down.webp") !important;
+    width: 40px;
+    height: 40px;
+    display: inline-block !important;
+    background-position: center !important;
+    background-size: 30px 30px !important;
     background-repeat: no-repeat;
     content: "";
     text-align: center;
@@ -86,34 +175,38 @@ i.fa-caret-left::before{
 
 #sidebar #sidebar-tabs i.fa-comments {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/speechbubble.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/speechbubble.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
-}
-#sidebar-tabs {
-    flex: 0 0 32px;
-    box-sizing: border-box;
-    margin: 0 0 5px;
-    border-bottom: 1px solid rgb(0, 110, 255);
-    box-shadow: 0 0 10px #008cff;
-}
-#sidebar-tabs > .item {
-    line-height: 0px;
-    height: 55px;
-    
-}
-#sidebar-tabs > .item.active {
-    color: #FFF;
-    border: 1px solid rgb(0, 110, 255);
-    box-shadow: 0 0 6px inset #008cff;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
-#sidebar.collapsed #sidebar-tabs > .item.active {
-    border-bottom: 1px solid rgb(0, 110, 255);
-    border-radius: 5px;
+#sidebar-tabs {
+    height: 135px;
+    /*border: 2px solid black;*/
+    box-shadow: 0 0 6px inset rgba(0, 0, 0, 0.137);
+    background-color: none;
+/*    background-color: #343434;*/
+    padding-bottom: 3px;
+    flex-wrap: wrap !important;
+}
+
+    
+#sidebar-tabs>.item {
+    line-height: 0px;
+    height: 53px;
+}
+
+#sidebar-tabs>.item.active {
+    color: #FFF;
+    border: 1px solid rgb(82, 70, 1);
+    box-shadow: 0 0 6px inset #686102;
+}
+
+#sidebar.collapsed #sidebar-tabs>.item.active {
+    border-bottom: 1px solid rgb(82, 70, 1);
 }
 
 #sidebar #sidebar-tabs i.fa-comments::before {
@@ -122,12 +215,12 @@ i.fa-caret-left::before{
 
 #sidebar #sidebar-tabs i.fa-fist-raised {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/combat.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/combat.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-fist-raised::before {
@@ -136,12 +229,12 @@ i.fa-caret-left::before{
 
 #sidebar #sidebar-tabs i.fa-map {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/scenes.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/scenes.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-map::before {
@@ -150,12 +243,12 @@ i.fa-caret-left::before{
 
 #sidebar #sidebar-tabs i.fa-users {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/actors.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/actors.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-users::before {
@@ -164,12 +257,12 @@ i.fa-caret-left::before{
 
 #sidebar #sidebar-tabs i.fa-suitcase {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/items.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/items.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-suitcase::before {
@@ -178,54 +271,84 @@ i.fa-caret-left::before{
 
 #sidebar #sidebar-tabs i.fa-book-open {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/journals.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/journals.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-book-open::before {
     content: "";
 }
-
+.sidebar-tab .directory-list {
+    font-size: x-small;
+}
 #sidebar #sidebar-tabs i.fa-th-list {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/tables.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/tables.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-th-list::before {
     content: "";
 }
 
+#sidebar #sidebar-tabs i.fa-id-badge {
+    content: "";
+    background-image: url("/modules/scifi-ui/ui/img/cards.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: inline-block !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#sidebar #sidebar-tabs i.fa-id-badge::before {
+    content: "";
+}
+
 #sidebar #sidebar-tabs i.fa-music {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/music.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/music.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-music::before {
     content: "";
 }
 
+#sidebar #sidebar-tabs i.fa-code {
+    content: "";
+    background-image: url("/modules/scifi-ui/ui/img/code.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: inline-block !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#sidebar #sidebar-tabs i.fa-code::before {
+    content: "";
+}
+
 #sidebar #sidebar-tabs i.fa-atlas {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/compendiums.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/compendiums.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-atlas::before {
@@ -234,35 +357,37 @@ i.fa-caret-left::before{
 
 #sidebar #sidebar-tabs i.fa-cogs {
     content: "";
-    background-image: url("/modules/scifi-ui/ui/img/settings.png") !important;
-    width: 50px !important;
-    height: 50px !important;
+    background-image: url("/modules/scifi-ui/ui/img/settings.webp") !important;
+    width: 40px !important;
+    height: 40px !important;
     display: inline-block !important;
-    background-position:center !important;
-    background-size:cover !important;
+    background-position: center !important;
+    background-size: cover !important;
 }
 
 #sidebar #sidebar-tabs i.fa-cogs::before {
     content: "";
 }
+
+
 /* #endregion */
 
+
 /* #region Chat Tab*/
-.message{
-    background-size: 100% 100% !important;
-   /* background-image: url("/modules/scifi-ui/ui/img/window_blue2.png") !important;*/
+
+.message {
+    background-image: url("/modules/scifi-ui/ui/img/parchment-smooth.webp") !important;
 }
+
 .message-sender {
-    color: darkblue;
+    color: darkred;
     font-weight: bold;
-    border-bottom-color: darkblue;
+    border-bottom-color: darkred;
     text-decoration: underline;
-    padding-left: 5px;
 }
-#chat-message{
-    background-size: 100% 100% !important;
-    padding-left: 5px;
-    background-image: url(/modules/scifi-ui/ui/img/steel.png) !important;
+
+#chat-message {
+    background-image: url("/modules/scifi-ui/ui/img/parchment-smooth.webp") !important;
 }
 
 .polyglot-lang-select select {
@@ -274,23 +399,26 @@ i.fa-caret-left::before{
     height: 24px;
     top: 7px;
     padding-top: 0px;
-    background: url(/modules/scifi-ui/ui/img/steel2.png) repeat !important;
+    background: url("/modules/scifi-ui/ui/img/parchment-smooth.webp") repeat !important;
     background-position-x: 0%;
     background-position-y: 0%;
     background-position: initial;
     box-shadow: inset 0 0 10px #000000;
-    border-image: url(/modules/scifi-ui/ui/img/chat-controls-border.png) 4 repeat;
+    border-image: url("/modules/scifi-ui/ui/img/chat-controls-border.webp") 4 repeat;
     border-image-width: 4px;
     border-image-outset: 3px 2px 2px 2px;
     color: #520000;
     margin-top: -10px;
 }
-.roll-type-select{
+
+#chat-controls .roll-type-select {
     color: white !important;
     text-align: left;
     margin-bottom: 20px;
+    background-color: #000000;
 }
-#chat-controls .control-buttons{
+
+#chat-controls .control-buttons {
     color: white;
 }
 
@@ -303,27 +431,31 @@ i.fa-caret-left::before{
     height: 24px;
     top: 7px;
     padding-top: 3px;
-    background: url(/modules/scifi-ui/ui/img/steel2.png) repeat;
+    background: url("/modules/scifi-ui/ui/img/parchment-smooth.webp") repeat;
     background-position-x: 0%;
     background-position-y: 0%;
     background-position: initial;
     box-shadow: inset 0 0 10px #000000;
-    border-image: url(/modules/scifi-ui/ui/img/chat-controls-border.png) 4 repeat;
+    border-image: url("/modules/scifi-ui/ui/img/chat-controls-border.webp") 4 repeat;
     border-image-width: 4px;
     border-image-outset: 3px 2px 2px 2px;
-    color: #013877;
+    color: #520000;
 }
 
-#combat-controls .combat-control{
-    background-image: url(/modules/scifi-ui/ui/img/buttonredlight.png);
+#combat-controls .combat-control {
+    background-image: url("/modules/scifi-ui/ui/img/buttonredlight.webp");
     text-align: center;
     background-position: center !important;
     background-size: 260px 100%!important;
     background-repeat: no-repeat;
 }
+
+
 /* #endregion*/
 
+
 /* #region Sidebar Folder and widgets*/
+
 .sidebar-tab .directory-header .header-search input {
     font-family: CaslonPro;
     font-weight: 500;
@@ -333,58 +465,90 @@ i.fa-caret-left::before{
     height: 24px;
     top: 7px;
     padding-top: 3px;
-    background: url(/modules/scifi-ui/ui/img/steel2.png) repeat;
+    background: url("/modules/scifi-ui/ui/img/parchment-smooth.webp") repeat;
     background-position-x: 0%;
     background-position-y: 0%;
     background-position: initial;
     box-shadow: inset 0 0 10px #000000;
-    border-image: url(/modules/scifi-ui/ui/img/chat-controls-border.png) 4 repeat;
+    border-image: url("/modules/scifi-ui/ui/img/chat-controls-border.webp") 4 repeat;
     border-image-width: 4px;
     border-image-outset: 3px 2px 2px 2px;
     color: #520000;
-
 }
-.header-search{
+
+.header-search {
     padding-bottom: 8px;
 }
-.fa-search{
-    color: blue;
-}
-.fa-sort-amount-up{
-    color:blue;
+
+.fa-search {
+    color: darkgoldenrod;
 }
 
-.sidebar-tab .directory-footer button{
-    background-image: url(/modules/scifi-ui/ui/img/GreenButton_Pressed.png);
+.fa-sort-amount-up {
+    color: darkgoldenrod;
+}
+
+.sidebar-tab .directory-footer button {
+    background-image: url("/modules/scifi-ui/ui/img/buttongreenlight.webp");
     text-align: center;
     background-position: center !important;
     background-size: 100% 100% !important;
     background-repeat: no-repeat;
-    background-color: black;
-    padding-top: 0px;
-    margin-top: 0px;
+    padding-top: 5px;
+    margin-top: 5px;
     border: 0px solid #b5b3a4;
-    color : white;
-    text-shadow: 2px 2px black ;
+    color: white;
+    width: 100%;
+    height: 35px !important;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+    text-shadow: 2px 2px black;
 }
+
+.create-entity button::after {
+    content: "+ Entry";
+}
+
+
 /* #endregion */
 
+
 /* #region Folders as buttons */
+
 .sidebar-tab .folder .folder-header {
-    background-image: url(/modules/scifi-ui/ui/img/Button_Normal.png)  !important;
+    background-image: url("/modules/scifi-ui/ui/img/buttonlight3.webp") !important;
     text-align: left !important;
     background-position: center !important;
-    background-size: 100% 55px!important;
+    background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    width: 100%;
+    height: 35px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: white;
-    padding-left: 25px;
+    font-size: 1em;
+    padding-left: 35px !important;
+    margin-right: 0px !important;
+    text-shadow: 2px 2px black;
 }
 
 .sidebar-tab .directory-list .directory.item h3 {
     text-align: left !important;
     padding-left: 25px;
+    flex: unset;
+}
+
+.sidebar-tab .directory-list .directory-item h3,
+.sidebar-tab .directory-list .directory-item h4 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: unset;
+}
+
+li.folder>.folder-header {
+    background: transparent;
 }
 
 #sidebar section.sidebar-directory ol.directory-list li.directory-item.folder header {
@@ -392,68 +556,175 @@ i.fa-caret-left::before{
     text-align: left !important;
     padding-left: 25px;
 }
+
 .subdirectory .folder {
     border-left: 2px solid #585858 !important;
 }
 
+li.folder>.folder-header .create-folder {
+    /*flex: 0 0 35px;*/
+    text-align: right;
+    color: #CCC;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+li.folder>.folder-header .create-entity {
+    /*flex: 0 0 35px;*/
+    flex: unset;
+    text-align: right;
+    color: #CCC;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+
 /* #endregion */
 
+
 /* #region Compendium headers */
+
 #compendium h3 {
     text-align: left;
     position: relative;
-    height: 55px;
+    height: 35px !important;
     top: 7px;
-    padding-top: 17px;
-    padding-left: 35px;
-    background: url(/modules/scifi-ui/ui/img/RedButton_Up.png) no-repeat;
+    padding-top: 10px;
+    padding-left: 45px;
+    /*background-image: url("/modules/scifi-ui/ui/img/buttonlight3.webp") !important;*/
     background-position-x: 0%;
-    background-size: 100% 55px;
+    background-size: 100% 100% !important;
     background-position-y: 0%;
     background-position: initial;
-    /*box-shadow: inset 0 0 10px #000000;*/
-    /*border-image: url(/modules/scifi-ui/ui/img/chat-controls-border.png) 4 repeat;*/
-    border-image-width: 4px;
-    border-image-outset: 3px 2px 2px 2px;
+
     color: #eeede0;
     text-shadow: 2px 2px 4px #000000;
 }
+
 #compendium ol.compendium-list {
-    padding-left: 25px;;
+    padding-left: 25px;
+    ;
 }
+
+
 /* #endregion */
+
 
 /* #region Remove speaker name background colors in Chat window */
+
 #chat-log .message .message-header .message-sender {
-    background-color: rgba(0,0,0,0) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
 }
+
+
 /* #endregion */
+
 
 /* #region Fix so as not to bigfoot on VTTA's tag system */
-#sidebar section > ol.directory-list > li header > span.vtta-folder-label {
+
+#sidebar section>ol.directory-list>li header>span.vtta-folder-label {
     text-shadow: 0px 0px 0px black !important;
 }
+
+
 /* #endregion */
 
-/* #region Chat log */
-/* differentiate public roll from private or blind.
- Private uses class whisper, blind uses class blind AND whisper, Self Roll
- uses class whisper (identical to Private Roll for CSS) */
-#chat-log .message.whisper {
 
+/* #region Chat log */
+
+
+/* differentiate public roll from big or blind.
+ big uses class whisper, blind uses class blind AND whisper, Self Roll
+ uses class whisper (identical to big Roll for CSS) */
+
+#chat-log .message.whisper {
     font-style: italic;
 }
 
-#chat-log .message.whisper .message-header .message-metadata::before{
+#chat-log .message.whisper .message-header .message-metadata::before {
     color: #585858;
-    content: " (Private Roll) ";
+    content: " (big Roll) ";
+    float: left;
+}
+
+#chat-log .message.blind .message-header .message-metadata::before {
+    color: #585858;
+    content: " (Blind Roll) " !important;
     float: left;
 }
 
 
-#chat-log .message.blind .message-header .message-metadata::before{
-    color: #585858;
-    content: " (Blind Roll) " !important;
-    float: left;
+/* #endregion */
+
+
+/* #region Other */
+
+.sidebar-tab .directory-footer button.create-entity {
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.sidebar-tab .directory-footer button.create-folder {
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.sidebar-tab .directory-footer button.quest-log-btn {
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.sidebar-tab .directory-footer button.create-pdf {
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.fa-folder-plus:before {
+    padding-left: 10px;
+    margin-top: 7px;
+}
+
+.fa-user-plus:before{
+    padding-left: 15px;
+    margin-top: 7px;
+}    
+.fa-atlas:before {
+    padding-left: 10px;
+    margin-top: 7px;    
+    vertical-align: middle;
+}
+.directory .action-buttons button {
+    background-image: url("/modules/scifi-ui/ui/img/buttongreenlight.webp");
+    background-color: unset;
+    text-align: center;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat;
+    padding-top: 5px;
+    margin-top: 5px;
+    border: 0px solid #b5b3a4;
+    color: white;
+    width: auto;
+    height: 40px !important;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+    text-shadow: 2px 2px black;
+
+}
+.compendium-folder-header > .create-folder {
+    margin-top: 7px;
+    margin-right: 5px;
+}
+li.compendium-folder > .compendium-folder-header .create-entity-c {
+margin-top: 7px;
 }
 /* #endregion */
