@@ -213,7 +213,7 @@ i.fa-caret-down::before {
     content: "";
 }
 
-#sidebar #sidebar-tabs i.fa-fist-raised {
+#sidebar #sidebar-tabs i.fa-swords {
     content: "";
     background-image: url("/modules/scifi-ui/ui/img/combat.webp") !important;
     width: 40px !important;
@@ -223,7 +223,7 @@ i.fa-caret-down::before {
     background-size: cover !important;
 }
 
-#sidebar #sidebar-tabs i.fa-fist-raised::before {
+#sidebar #sidebar-tabs i.fa-swords::before {
     content: "";
 }
 
@@ -241,7 +241,7 @@ i.fa-caret-down::before {
     content: "";
 }
 
-#sidebar #sidebar-tabs i.fa-users {
+#sidebar #sidebar-tabs i.fa-user {
     content: "";
     background-image: url("/modules/scifi-ui/ui/img/actors.webp") !important;
     width: 40px !important;
@@ -251,7 +251,7 @@ i.fa-caret-down::before {
     background-size: cover !important;
 }
 
-#sidebar #sidebar-tabs i.fa-users::before {
+#sidebar #sidebar-tabs i.fa-user::before {
     content: "";
 }
 
@@ -299,7 +299,7 @@ i.fa-caret-down::before {
     content: "";
 }
 
-#sidebar #sidebar-tabs i.fa-id-badge {
+#sidebar #sidebar-tabs i.fa-cards {
     content: "";
     background-image: url("/modules/scifi-ui/ui/img/cards.webp") !important;
     width: 40px !important;
@@ -309,7 +309,7 @@ i.fa-caret-down::before {
     background-size: cover !important;
 }
 
-#sidebar #sidebar-tabs i.fa-id-badge::before {
+#sidebar #sidebar-tabs i.fa-cards::before {
     content: "";
 }
 
@@ -613,7 +613,7 @@ li.folder>.folder-header .create-entity {
 /* #region Remove speaker name background colors in Chat window */
 
 #chat-log .message .message-header .message-sender {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 
 
@@ -642,13 +642,13 @@ li.folder>.folder-header .create-entity {
 }
 
 #chat-log .message.whisper .message-header .message-metadata::before {
-    color: #585858;
+    color: #ffffff;
     content: " (big Roll) ";
     float: left;
 }
 
 #chat-log .message.blind .message-header .message-metadata::before {
-    color: #585858;
+    color: #ffffff;
     content: " (Blind Roll) " !important;
     float: left;
 }
@@ -711,13 +711,14 @@ li.folder>.folder-header .create-entity {
     padding-top: 5px;
     margin-top: 5px;
     border: 0px solid #b5b3a4;
-    color: white;
+    color: white !important;
     width: auto;
     height: 40px !important;
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: auto;
     text-shadow: 2px 2px black;
+
 
 }
 .compendium-folder-header > .create-folder {
@@ -727,4 +728,9 @@ li.folder>.folder-header .create-entity {
 li.compendium-folder > .compendium-folder-header .create-entity-c {
 margin-top: 7px;
 }
+
+
+
+
+
 /* #endregion */
