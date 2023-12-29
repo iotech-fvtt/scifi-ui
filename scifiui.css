@@ -213,7 +213,7 @@ i.fa-caret-down::before {
     content: "";
 }
 
-#sidebar #sidebar-tabs i.fa-fist-raised {
+#sidebar #sidebar-tabs i.fa-swords {
     content: "";
     background-image: url("/modules/scifi-ui/ui/img/combat.webp") !important;
     width: 40px !important;
@@ -223,7 +223,7 @@ i.fa-caret-down::before {
     background-size: cover !important;
 }
 
-#sidebar #sidebar-tabs i.fa-fist-raised::before {
+#sidebar #sidebar-tabs i.fa-swords::before {
     content: "";
 }
 
@@ -241,7 +241,7 @@ i.fa-caret-down::before {
     content: "";
 }
 
-#sidebar #sidebar-tabs i.fa-users {
+#sidebar #sidebar-tabs i.fa-user {
     content: "";
     background-image: url("/modules/scifi-ui/ui/img/actors.webp") !important;
     width: 40px !important;
@@ -251,7 +251,7 @@ i.fa-caret-down::before {
     background-size: cover !important;
 }
 
-#sidebar #sidebar-tabs i.fa-users::before {
+#sidebar #sidebar-tabs i.fa-user::before {
     content: "";
 }
 
@@ -299,7 +299,7 @@ i.fa-caret-down::before {
     content: "";
 }
 
-#sidebar #sidebar-tabs i.fa-id-badge {
+#sidebar #sidebar-tabs i.fa-cards {
     content: "";
     background-image: url("/modules/scifi-ui/ui/img/cards.webp") !important;
     width: 40px !important;
@@ -309,7 +309,7 @@ i.fa-caret-down::before {
     background-size: cover !important;
 }
 
-#sidebar #sidebar-tabs i.fa-id-badge::before {
+#sidebar #sidebar-tabs i.fa-cards::before {
     content: "";
 }
 
@@ -524,13 +524,16 @@ i.fa-caret-down::before {
     background-repeat: no-repeat !important;
     width: 100%;
     height: 35px !important;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 15px;
+    /* padding-bottom: 15px; */
     color: white;
     font-size: 1em;
-    padding-left: 35px !important;
+    /* padding-left: 15px !important; */
     margin-right: 0px !important;
     text-shadow: 2px 2px black;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:space-between
 }
 
 .sidebar-tab .directory-list .directory.item h3 {
@@ -561,6 +564,13 @@ li.folder>.folder-header {
     border-left: 2px solid #585858 !important;
 }
 
+.compendium-sidebar .directory-list .subdirectory h3.entry-name.compendium-name {
+    margin-bottom: 10px;
+    font-size: 14px;
+    height:  25px !important;
+}
+
+
 li.folder>.folder-header .create-folder {
     /*flex: 0 0 35px;*/
     text-align: right;
@@ -587,18 +597,23 @@ li.folder>.folder-header .create-entity {
 #compendium h3 {
     text-align: left;
     position: relative;
-    height: 35px !important;
-    top: 7px;
-    padding-top: 10px;
-    padding-left: 45px;
-    /*background-image: url("/modules/scifi-ui/ui/img/buttonlight3.webp") !important;*/
+    height: auto;
+    top: 0px;
+    padding: 2px 20px;
+    /* background-image: url("/modules/scifi-ui/ui/img/buttonlight3.webp") !important; */
     background-position-x: 0%;
     background-size: 100% 100% !important;
     background-position-y: 0%;
     background-position: initial;
-
     color: #eeede0;
     text-shadow: 2px 2px 4px #000000;
+}
+
+#compendium .directory-list .directory-item.folder .subdirectory .compendium.directory-item h3.entry-name.compendium-name {
+    margin-bottom: 5px;
+    font-size: .875rem;
+    display: flex;
+    align-items: center;
 }
 
 #compendium ol.compendium-list {
@@ -613,7 +628,7 @@ li.folder>.folder-header .create-entity {
 /* #region Remove speaker name background colors in Chat window */
 
 #chat-log .message .message-header .message-sender {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 
 
@@ -642,13 +657,13 @@ li.folder>.folder-header .create-entity {
 }
 
 #chat-log .message.whisper .message-header .message-metadata::before {
-    color: #585858;
+    color: #ffffff;
     content: " (big Roll) ";
     float: left;
 }
 
 #chat-log .message.blind .message-header .message-metadata::before {
-    color: #585858;
+    color: #ffffff;
     content: " (Blind Roll) " !important;
     float: left;
 }
@@ -711,13 +726,14 @@ li.folder>.folder-header .create-entity {
     padding-top: 5px;
     margin-top: 5px;
     border: 0px solid #b5b3a4;
-    color: white;
+    color: white !important;
     width: auto;
     height: 40px !important;
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: auto;
     text-shadow: 2px 2px black;
+
 
 }
 .compendium-folder-header > .create-folder {
@@ -727,4 +743,12 @@ li.folder>.folder-header .create-entity {
 li.compendium-folder > .compendium-folder-header .create-entity-c {
 margin-top: 7px;
 }
+
+
+#compendium h3.noborder {
+    padding-top: 0;
+    padding-left: 0
+}
+
+
 /* #endregion */
